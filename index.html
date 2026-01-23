@@ -3,9 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cookie Clicker</title>
     <script src="app.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <title>Ring Clicker</title>
   </head>
-  <body></body>
+  <body>
+    <!-- <button id="defuseBtn">defuse bomb</button> -->
+
+    <img
+      class="big-ring"
+      src="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyMXN5MDE3NmNyaHBjbnp2eDloZXoyZmNzNTM5a2k4cGdmb2lkb2F5YiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/fxLFhxNQFqfFXHVsOZ/200w.gif"
+      alt="big-spinning-ring"
+    />
+
+    <div class="info">
+      <p>Ring Count:</p>
+      <!-- this is just a title-->
+      <p id="ringCount"></p>
+      <!-- this will display whatever we ask ringCount to display via js, which will be the current amount of rings in the bank-->
+      <p>RPS:</p>
+      <!--this is just a title-->
+      <p id="rps"></p>
+      <!-- this will display whatever we ask rps to display via js, which will be how many rings per second are being added to the bank-->
+    </div>
+
+    <div class="containers">
+      <div id="nameContainer" class="name-container"></div>
+      <div class="buttons">
+        <button id="BoostButton1">BUY</button>
+        <button id="BoostButton2">BUY</button>
+        <button id="BoostButton3">BUY</button>
+        <button id="BoostButton4">BUY</button>
+        <button id="BoostButton5">BUY</button>
+        <button id="BoostButton6">BUY</button>
+        <button id="BoostButton7">BUY</button>
+        <button id="BoostButton8">BUY</button>
+        <button id="BoostButton9">BUY</button>
+        <button id="BoostButton10">BUY</button>
+      </div>
+      <div id="costContainer" class="cost-container"></div>
+      <div id="increaseContainer" class="increase-container"></div>
+    </div>
+  </body>
 </html>
