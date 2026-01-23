@@ -19,40 +19,45 @@ body {
 
 .name-container {
   height: 50vh;
-  border: 5px solid red;
-  border-right: none;
+  border: 5px solid black;
+  border-right: black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-right: 20px;
   padding-left: 20px;
+  background-color: black;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .buttons {
   height: 50vh;
-  border: 5px solid red;
-  border-left: none;
+  border: 5px solid black;
+  border-left: 5px solid black;
   border-right: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: black;
 }
 
 .cost-container {
   height: 50vh;
-  border: 5px solid red;
+  border: 5px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-left: none;
+  border-left: 5px solid black;
   padding-left: 20px;
   padding-right: 20px;
   align-items: left;
+  background-color: red;
 }
 
 .increase-container {
   height: 50vh;
-  border: 5px solid red;
+  border: 5px solid black;
   border-left: none;
   display: flex;
   flex-direction: column;
@@ -60,6 +65,9 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   align-items: left;
+  background-color: darkgreen;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .big-ring {
@@ -96,4 +104,87 @@ p#ringCount {
 
 p#rps {
   padding-left: 10px;
+}
+
+.sonic {
+  display: flex;
+  width: auto;
+  height: 170px;
+  justify-content: space-between;
+  position: absolute;
+  margin-inline: auto;
+  left: 850px;
+  bottom: 100px;
+}
+
+.tails {
+  display: flex;
+  width: 200px;
+  height: auto;
+  justify-content: space-between;
+  position: absolute;
+  margin-inline: auto;
+  bottom: 100px;
+  left: 195px;
+}
+
+#boostButton1 {
+  background-color: rgb(218, 16, 87);
+}
+#boostButton1:hover {
+  background-color: green;
+}
+#boostButton2 {
+  background-color: rgb(218, 16, 87);
+}
+#boostButton2:hover {
+  background-color: green;
+}
+#boostButton3 {
+  background-color: rgb(218, 16, 87);
+}
+#boostButton3:hover {
+  background-color: green;
+}
+#boostButton4 {
+  background-color: rgb(218, 16, 87);
+}
+#boostButton4:hover {
+  background-color: green;
+}
+#boostButton5 {
+  background-color: rgb(218, 16, 87);
+}
+#boostButton5:hover {
+  background-color: green;
+}
+#boostButton6 {
+  background-color: rgb(218, 16, 87);
+}
+#boostButton6:hover {
+  background-color: green;
+}
+#boostButton7 {
+  background-color: rgb(218, 16, 87);
+}
+#boostButton7:hover {
+  background-color: green;
+}
+#boostButton8 {
+  background-color: rgb(218, 16, 87);
+}
+#boostButton8:hover {
+  background-color: green;
+}
+#boostButton9 {
+  background-color: rgb(218, 16, 87);
+}
+#boostButton9:hover {
+  background-color: green;
+}
+#boostButton10 {
+  background-color: rgb(218, 16, 87);
+}
+#boostButton10:hover {
+  background-color: green;
 }

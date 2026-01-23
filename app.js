@@ -86,6 +86,17 @@ const nameContainer = document.querySelector(".name-container");
 
 const costContainer = document.querySelector(".cost-container");
 
+// audio clips to be called for (later) by the big ring image event listener when a user clicks on it
+const ringAudio = new Audio("audio/sonic-grabs-a-ring.mp3");
+
+// same for an item bought audio file
+const saleAudio = new Audio(
+  "https://soundbible.com/mp3/Cha_Ching_Register-Muska666-173262285.mp3",
+);
+
+// same for achieving a landmark coin total
+const segaAudio = new Audio("audio/sega-hd.mp3");
+
 // link the html buttons to javasript
 const button1 = document.getElementById("boostButton1");
 const button2 = document.getElementById("boostButton2");
@@ -123,6 +134,7 @@ myRpsDisplay.innerText = rps;
 myImage.addEventListener("click", function () {
   ringCount++;
   myRingCountDisplay.innerText = ringCount;
+  ringAudio.play();
   console.log(ringCount);
 });
 
@@ -130,7 +142,7 @@ myImage.addEventListener("click", function () {
 setInterval(function () {
   ringCount++;
   myRingCountDisplay.innerText = ringCount;
-}, 1000);
+}, 1000); // this sets the default timer to add coins every second
 // now we've got this far. We need to set some default values for what the counters values start at when the page is first loaded. We want the bank to be zero, and the rps to be 1. We havent yet programmed the rpm but we know when we do - we'll start it off adding just 1 ring per second. Add these default values at the very top of this js page, we like to add default values as high as possible so the page receives all neseccary data before the rest of the script runs. I will label these at the top of this page as DEFAULT VALUES.
 
 // remember local storage is a requirement of this assignment!!
@@ -245,35 +257,179 @@ pullIncrease(); // invoker command
 
 // add an event listener to each button for when a user clicks on it
 button1.addEventListener("click", () => {
-  console.log(button1.id);
+  if (ringCount >= 100) {
+    rps++;
+    saleAudio.play();
+    ringCount -= 100;
+    myRpsDisplay.innerText = rps;
+    setInterval(function () {
+      ringCount += 1;
+      myRingCountDisplay.innerText = ringCount;
+    }, 1000);
+  } else {
+    alert(
+      "Sorry, you can't afford that! Keep clicking the GIANT ring to collect more!",
+    );
+  }
 });
+
 button2.addEventListener("click", () => {
-  console.log(button2.id);
+  if (ringCount >= 500) {
+    rps += 5;
+    saleAudio.play();
+    ringCount -= 500;
+    myRpsDisplay.innerText = rps;
+    setInterval(function () {
+      ringCount += 5;
+      myRingCountDisplay.innerText = ringCount;
+    }, 1000);
+  } else {
+    alert(
+      "Sorry, you can't afford that! Keep clicking the GIANT ring to collect more!",
+    );
+  }
 });
+
 button3.addEventListener("click", () => {
-  console.log(button3.id);
+  if (ringCount >= 1000) {
+    rps += 10;
+    saleAudio.play();
+    ringCount -= 1000;
+    myRpsDisplay.innerText = rps;
+    setInterval(function () {
+      ringCount += 10;
+      myRingCountDisplay.innerText = ringCount;
+    }, 1000);
+  } else {
+    alert(
+      "Sorry, you can't afford that! Keep clicking the GIANT ring to collect more!",
+    );
+  }
 });
+
 button4.addEventListener("click", () => {
-  console.log(button4.id);
+  if (ringCount >= 2000) {
+    rps += 20;
+    saleAudio.play();
+    ringCount -= 2000;
+    myRpsDisplay.innerText = rps;
+    setInterval(function () {
+      ringCount += 20;
+      myRingCountDisplay.innerText = ringCount;
+    }, 1000);
+  } else {
+    alert(
+      "Sorry, you can't afford that! Keep clicking the GIANT ring to collect more!",
+    );
+  }
 });
+
 button5.addEventListener("click", () => {
-  console.log(button5.id);
+  if (ringCount >= 5000) {
+    rps += 50;
+    saleAudio.play();
+    ringCount -= 5000;
+    myRpsDisplay.innerText = rps;
+    setInterval(function () {
+      ringCount += 50;
+      myRingCountDisplay.innerText = ringCount;
+    }, 1000);
+  } else {
+    alert(
+      "Sorry, you can't afford that! Keep clicking the GIANT ring to collect more!",
+    );
+  }
 });
+
 button6.addEventListener("click", () => {
-  console.log(button6.id);
+  if (ringCount >= 10000) {
+    rps += 100;
+    saleAudio.play();
+    ringCount -= 10000;
+    myRpsDisplay.innerText = rps;
+    setInterval(function () {
+      ringCount += 100;
+      myRingCountDisplay.innerText = ringCount;
+    }, 1000);
+  } else {
+    alert(
+      "Sorry, you can't afford that! Keep clicking the GIANT ring to collect more!",
+    );
+  }
 });
+
 button7.addEventListener("click", () => {
-  console.log(button7.id);
+  if (ringCount >= 20000) {
+    rps += 200;
+    saleAudio.play();
+    ringCount -= 20000;
+    myRpsDisplay.innerText = rps;
+    setInterval(function () {
+      ringCount += 200;
+      myRingCountDisplay.innerText = ringCount;
+    }, 1000);
+  } else {
+    alert(
+      "Sorry, you can't afford that! Keep clicking the GIANT ring to collect more!",
+    );
+  }
 });
+
 button8.addEventListener("click", () => {
-  console.log(button8.id);
+  if (ringCount >= 50000) {
+    rps += 500;
+    saleAudio.play();
+    ringCount -= 50000;
+    myRpsDisplay.innerText = rps;
+    setInterval(function () {
+      ringCount += 500;
+      myRingCountDisplay.innerText = ringCount;
+    }, 1000);
+  } else {
+    alert(
+      "Sorry, you can't afford that! Keep clicking the GIANT ring to collect more!",
+    );
+  }
 });
+
 button9.addEventListener("click", () => {
-  console.log(button9.id);
+  if (ringCount >= 100000) {
+    rps += 1000;
+    saleAudio.play();
+    ringCount -= 100000;
+    myRpsDisplay.innerText = rps;
+    setInterval(function () {
+      ringCount += 1000;
+      myRingCountDisplay.innerText = ringCount;
+    }, 1000);
+  } else {
+    alert(
+      "Sorry, you can't afford that! Keep clicking the GIANT ring to collect more!",
+    );
+  }
 });
+
 button10.addEventListener("click", () => {
-  console.log(button10.id);
+  if (ringCount >= 200000) {
+    rps += 2000;
+    saleAudio.play();
+    ringCount -= 200000;
+    myRpsDisplay.innerText = rps;
+    setInterval(function () {
+      ringCount += 2000;
+      myRingCountDisplay.innerText = ringCount;
+    }, 1000);
+  } else {
+    alert(
+      "Sorry, you can't afford that! Keep clicking the GIANT ring to collect more!",
+    );
+  }
 });
+
+// this isnt working at the moment. dont know why
+if (ringCount >= 100) {
+  segaAudio.play();
+}
 
 // await fetch
 // await something.json()
