@@ -10,27 +10,62 @@ body {
   text-shadow: 2px 2px rgb(0, 0, 0);
 }
 
-.buttons {
+.containers {
+  height: auto;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  width: 50%;
 }
 
-.containers {
+.name-container {
+  height: 50vh;
+  border: 5px solid red;
+  border-right: none;
   display: flex;
-  align-self: flex-end;
-  justify-content: space-evenly;
-  position: relative;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.buttons {
+  height: 50vh;
+  border: 5px solid red;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cost-container {
+  height: 50vh;
+  border: 5px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: left;
+}
+
+.increase-container {
+  height: 50vh;
+  border: 5px solid red;
+  border-left: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: left;
 }
 
 .big-ring {
   display: flex;
-
-  padding: 10px;
+  width: 200px;
+  height: auto;
   justify-content: space-between;
   position: relative;
   left: 0;
@@ -40,9 +75,25 @@ body {
 
 .info {
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
+}
+
+#ringCount {
+  padding-right: 25px;
+}
+
+p#ringCount {
+  padding-left: 10px;
+}
+
+#rps {
+  padding-left: 10px;
+}
+
+p#rps {
+  padding-left: 10px;
 }

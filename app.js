@@ -86,6 +86,18 @@ const nameContainer = document.querySelector(".name-container");
 
 const costContainer = document.querySelector(".cost-container");
 
+// link the html buttons to javasript
+const button1 = document.getElementById("boostButton1");
+const button2 = document.getElementById("boostButton2");
+const button3 = document.getElementById("boostButton3");
+const button4 = document.getElementById("boostButton4");
+const button5 = document.getElementById("boostButton5");
+const button6 = document.getElementById("boostButton6");
+const button7 = document.getElementById("boostButton7");
+const button8 = document.getElementById("boostButton8");
+const button9 = document.getElementById("boostButton9");
+const button10 = document.getElementById("boostButton10");
+
 // step 1. we first need to create a ring gif image on the document. give it an id name.
 // step 2. We need to create a p tag element for displaying the current rings being created per second. As this text display will be a variable (changing all the time) we must also give it an id name.
 // step 3. We need to create a p tag element for displaying the total rings currently made. As this text display will be a variable (changing all the time) we must also give it an id name.
@@ -105,6 +117,7 @@ const myImage = document.querySelector("img");
 
 // now tell your myRingCountDisplay to display whatever it's value is as a text value. Which is then pasted in between the <p> tags on the document (with the id of ringCount). This won't display anything just yet as we need to set what value the ringCount starts at. Which will of course be zero. But we'll do that later.
 myRingCountDisplay.innerText = ringCount;
+myRpsDisplay.innerText = rps;
 
 // now let's make the large spinning ring recognise when it has been clicked. Add an event listener to it. Then a function to add 1 to the ringCount value every time it's clicked. If you check your console at this stage you will see the console is detecting each click. But it's not pasting it's updated value to the page. This is because the code runs down this page, and it needs reminding to change the innerText value again. So add this line, and see what happens
 myImage.addEventListener("click", function () {
@@ -185,7 +198,7 @@ async function pullCost() {
   const readableData = await fetchApi();
   for (let i = 0; i < readableData.length; i++) {
     const madeCostElement = document.createElement("div");
-    madeCostElement.innerText = readableData[i].cost;
+    madeCostElement.innerText = `(-) ${readableData[i].cost} rings`;
     madeCostElement.addEventListener("click", function () {
       console.log(readableData[i].cost);
     });
@@ -203,7 +216,7 @@ async function pullIncrease() {
   const readableData = await fetchApi();
   for (let i = 0; i < readableData.length; i++) {
     const madeIncreaseElement = document.createElement("div");
-    madeIncreaseElement.innerText = readableData[i].increase;
+    madeIncreaseElement.innerText = `(+) ${readableData[i].increase} rps`;
     madeIncreaseElement.addEventListener("click", function () {
       console.log(readableData[i].increase);
     });
@@ -213,7 +226,54 @@ async function pullIncrease() {
 }
 
 pullIncrease(); // invoker command
+
 //-------------------------------------------------------
+//-----------ADD EVENT LISTENER TO BUTTONS---------------
+
+// FIRST let's link up our js to the html buttons. We will call each one a simple name on here of button 1, 2, 3 etc.Remember to add all these to the upper part of this page
+
+//const button1 = document.getElementById("boostButton1");
+//const button2 = document.getElementById("boostButton2");
+//const button3 = document.getElementById("boostButton3");
+//const button4 = document.getElementById("boostButton4");
+//const button5 = document.getElementById("boostButton5");
+//const button6 = document.getElementById("boostButton6");
+//const button7 = document.getElementById("boostButton7");
+//const button8 = document.getElementById("boostButton8");
+//const button9 = document.getElementById("boostButton9");
+//const button10 = document.getElementById("boostButton10");
+
+// add an event listener to each button for when a user clicks on it
+button1.addEventListener("click", () => {
+  console.log(button1.id);
+});
+button2.addEventListener("click", () => {
+  console.log(button2.id);
+});
+button3.addEventListener("click", () => {
+  console.log(button3.id);
+});
+button4.addEventListener("click", () => {
+  console.log(button4.id);
+});
+button5.addEventListener("click", () => {
+  console.log(button5.id);
+});
+button6.addEventListener("click", () => {
+  console.log(button6.id);
+});
+button7.addEventListener("click", () => {
+  console.log(button7.id);
+});
+button8.addEventListener("click", () => {
+  console.log(button8.id);
+});
+button9.addEventListener("click", () => {
+  console.log(button9.id);
+});
+button10.addEventListener("click", () => {
+  console.log(button10.id);
+});
 
 // await fetch
 // await something.json()
