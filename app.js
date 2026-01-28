@@ -173,9 +173,9 @@ function resetGame() {
   };
 }
 
-//doesnt work. not sure why???
-//resetButton.addEventListener("click", resetGame);
+resetButton.addEventListener("click", resetGame);
 
+//doesnt work. not sure why???
 //if (gameState.bank >= 100) {
 // segaAudio.play();
 //}
