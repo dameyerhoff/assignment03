@@ -3,43 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ring Clicker</title>
     <script src="app.js" defer></script>
     <link rel="stylesheet" href="style.css" />
-    <title>Ring Clicker</title>
+     <!-- Load an icon library -->
+      <nav class="mainNavbar">
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
   </head>
   <body>
-    <img class="big-ring" src="images/big ring.gif" alt="big-spinning-ring" />
+    <header>
+       <img id="tails" src="images/tails.png"/>
+       <img id="bigRing" src="images/big ring.gif" alt="Big Ring" />
+      <img id="sonic" src="images/sonic.png"/>
+    
+    </header>
 
-    <div class="info">
-      <p class="ring-count">Ring Count:</p>
-      <!-- this is just a title-->
-      <p id="ringCount"></p>
-      <!-- this will display whatever we ask ringCount to display via js, which will be the current amount of rings in the bank-->
-      <p class="r-p-s">RPS:</p>
-      <!--this is just a title-->
+    <div id="info">
+      <p>Ring Balance</p>
+      <p id="ringBalance"></p>
+      <p>RPS</p>
       <p id="rps"></p>
-      <!-- this will display whatever we ask rps to display via js, which will be how many rings per second are being added to the bank-->
+      <button id="resetGame">Reset</button>
     </div>
 
-    <div class="containers">
-      <div id="nameContainer" class="name-container"></div>
-      <div class="buttons">
-        <button id="boostButton1">BUY</button>
-        <button id="boostButton2">BUY</button>
-        <button id="boostButton3">BUY</button>
-        <button id="boostButton4">BUY</button>
-        <button id="boostButton5">BUY</button>
-        <button id="boostButton6">BUY</button>
-        <button id="boostButton7">BUY</button>
-        <button id="boostButton8">BUY</button>
-        <button id="boostButton9">BUY</button>
-        <button id="boostButton10">BUY</button>
+    <div id="shop"></div>
+
+    <footer>
+      <p>Made by David Meyerhoff &copy 2026</p>
+
+      <div id="social">
+      <!-- Add font awesome icons -->
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
       </div>
-      <div id="costContainer" class="cost-container"></div>
-      <div id="increaseContainer" class="increase-container"></div>
-    </div>
-    <img class="sonic" src="images/sonic.png" />
-    <img class="tails" src="images/tails.png" />
-    <footer><button id="reset">RESET</button></footer>
+    </footer>
   </body>
 </html>
